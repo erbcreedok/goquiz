@@ -35050,8 +35050,8 @@ try {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vagrant/Code/goquiz/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/vagrant/Code/goquiz/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/yerbol/Desktop/goquiz/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/yerbol/Desktop/goquiz/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

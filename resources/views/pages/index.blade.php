@@ -5,7 +5,7 @@
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">
-                Квизы в Алматы
+                Квизы в Алматы 3
             </h1>
             <p class="lead text-muted">
                 Quiz - это барные викторины, прародителем которых является игра "Что? Где? Когда?" <br>

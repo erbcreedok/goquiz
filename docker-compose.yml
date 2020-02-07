@@ -1,0 +1,39 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: docker/app.dockerfile
+    working_dir: /var/www/goquiz
+    volumes:
+      - ./:/var/www/goquiz
+      - ./docker/app/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=database"
+
+  web:
+    build:
+      context: ./
+      dockerfile: docker/web.dockerfile
+    working_dir: /var/www/goquiz
+    volumes_from:
+      - app
+    ports:
+      - 8080:80
+
+  database:
+    image: mysql:5.6
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE=goquiz"
+      - "MYSQL_USER=root"
+      - "MYSQL_PASSWORD=root"
+      - "MYSQL_ROOT_PASSWORD=root"
+    ports:
+      - "33061:3306"
+
+
+volumes:
+  dbdata:
